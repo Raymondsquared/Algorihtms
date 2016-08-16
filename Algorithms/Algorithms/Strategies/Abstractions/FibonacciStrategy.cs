@@ -2,16 +2,16 @@
 
 namespace Algorithms.Strategies.Abstractions
 {
-    public abstract class ReverseWordsStrategy : IAlgorithmResolver
+    public abstract class FibonacciStrategy : IAlgorithmResolver
     {
         public CONSTANTS.ALGORITHM_TYPE GetAlgorithmType()
         {
-            return CONSTANTS.ALGORITHM_TYPE.REVERSE_WORDS;
+            return CONSTANTS.ALGORITHM_TYPE.FIBONACCI;
         }
 
         public string GetName()
         {
-            return this.GetType().Name;
+            return GetType().Name;
         }
 
         public abstract object Resolve(object input);

@@ -1,9 +1,8 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
 using Algorithms.Abstrations;
 using Algorithms.Models.ProblemSolutions;
+using Algorithms.Strategies.Implementation.Fibonacci;
 using Algorithms.Strategies.Implementation.ReverseWords;
 
 namespace Algorithms
@@ -12,6 +11,11 @@ namespace Algorithms
     {
         public static void Main(string[] args)
         {
+            Run(GetProblemResolversCollection());
+        }
+
+        public static IList<ProblemResolvers> GetProblemResolversCollection()
+        {
             IList<IAlgorithmResolver> reverseWordsResolvers = new List<IAlgorithmResolver>()
             {
                 new SimpleReverseWordsStrategy(),
@@ -19,18 +23,30 @@ namespace Algorithms
                 new ReccursiveReverseWordsStrategy()
             };
 
-            IList<ProblemResolvers> problemResolversCollection = new List<ProblemResolvers>()
+            IList<IAlgorithmResolver> fibonacciResolvers = new List<IAlgorithmResolver>()
+            {
+                new SimpleFibonacciStrategy()
+            };
+
+            return new List<ProblemResolvers>()
             {
                 new ProblemResolvers()
                 {
-                    Problem  = CONSTANTS.TEXT.REVERSE_WORDS_PROBLEM,
+                    Problem  = CONSTANTS.TEXTS.REVERSE_WORDS_PROBLEM,
                     AlgorithmResolvers = reverseWordsResolvers
+                },
+                new ProblemResolvers()
+                {
+                    Problem  = CONSTANTS.NUMBERS.FIBONACCI_PROBLEM,
+                    AlgorithmResolvers = fibonacciResolvers
                 }
-            };            
-            
-            foreach (var problemResolvers in problemResolversCollection)
+            };
+        }
+
+        public static void Run(IList<ProblemResolvers> inputCollection)
+        {
+            foreach (var problemResolvers in inputCollection)
             {
-                
                 Console.WriteLine($"Algorithm Type : {problemResolvers.Algorithm}");
                 Console.WriteLine($"Problem : {problemResolvers.Problem}");
 
@@ -42,8 +58,9 @@ namespace Algorithms
                     Console.WriteLine($"Solution : {algorithmResolver.Resolve(problemResolvers.Problem)}");
                 }
 
-
+                Console.WriteLine($"{Environment.NewLine}");
                 Console.WriteLine($"---------------------------------------------------------------------");
+                Console.WriteLine($"{Environment.NewLine}");
             }
         }
     }

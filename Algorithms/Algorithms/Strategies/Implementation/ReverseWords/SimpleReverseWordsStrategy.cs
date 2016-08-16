@@ -5,11 +5,6 @@ namespace Algorithms.Strategies.Implementation.ReverseWords
 {
     public class SimpleReverseWordsStrategy : ReverseWordsStrategy
     {
-        public override string GetName()
-        {
-            return "Simple";
-        }
-
         public override CONSTANTS.DIFFICULTIES GetDifficulty()
         {
             return CONSTANTS.DIFFICULTIES.LEVEL_1;

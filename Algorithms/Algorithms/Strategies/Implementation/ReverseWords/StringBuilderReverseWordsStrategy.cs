@@ -6,11 +6,6 @@ namespace Algorithms.Strategies.Implementation.ReverseWords
 {
     public class StringBuilderReverseWordsStrategy : ReverseWordsStrategy
     {
-        public override string GetName()
-        {
-            return "String Builder";
-        }
-
         public override CONSTANTS.DIFFICULTIES GetDifficulty()
         {
             return CONSTANTS.DIFFICULTIES.LEVEL_2;

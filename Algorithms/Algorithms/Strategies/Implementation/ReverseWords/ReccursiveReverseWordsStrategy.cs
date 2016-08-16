@@ -1,16 +1,10 @@
 ﻿using System;
-using System.Text;
 using Algorithms.Strategies.Abstractions;
 
 namespace Algorithms.Strategies.Implementation.ReverseWords
 {
     public class ReccursiveReverseWordsStrategy : ReverseWordsStrategy
     {
-        public override string GetName()
-        {
-            return "Reccursive";
-        }
-
         public override CONSTANTS.DIFFICULTIES GetDifficulty()
         {
             return CONSTANTS.DIFFICULTIES.RECCURSIVE;
