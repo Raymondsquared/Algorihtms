@@ -25,7 +25,9 @@ namespace Algorithms
 
             IList<IAlgorithmResolver> fibonacciResolvers = new List<IAlgorithmResolver>()
             {
-                new SimpleFibonacciStrategy()
+                new SimpleFibonacciStrategy(),
+                new BetterFibonacciStrategy(),
+                new ReccursiveFibonacciStrategy()
             };
 
             return new List<ProblemResolvers>()

@@ -26,16 +26,20 @@ namespace Algorithms.Strategies.Implementation.Fibonacci
                     {
                         for (var x = 0; x < inputNumber; x++)
                         {
-                            if (x < 2)
+                            if (x == 0)
+                            {
+                                resultCollection.Add(0);
+                            }
+                            else if (x < 2)
                             {
                                 resultCollection.Add(1);
                             }
                             else
                             {
-                                var past2 = resultCollection[x - 2];
-                                var past1 = resultCollection[x - 1];
+                                var pastTwo = resultCollection[x - 2];
+                                var pastOne = resultCollection[x - 1];
 
-                                resultCollection.Add(past2 + past1);
+                                resultCollection.Add(pastTwo + pastOne);
                             }                            
                         }
                     }

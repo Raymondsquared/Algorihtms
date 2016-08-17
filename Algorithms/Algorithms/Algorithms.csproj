@@ -51,6 +51,8 @@
     <Compile Include="Abstrations\IAlgorithmResolver.cs" />
     <Compile Include="Strategies\Abstractions\FibonacciStrategy.cs" />
     <Compile Include="Strategies\Abstractions\ReverseWordsStrategy.cs" />
+    <Compile Include="Strategies\Implementation\Fibonacci\ReccursiveFibonacciStrategy.cs" />
+    <Compile Include="Strategies\Implementation\Fibonacci\BetterFibonacciStrategy.cs" />
     <Compile Include="Strategies\Implementation\Fibonacci\SimpleFibonacciStrategy.cs" />
     <Compile Include="Strategies\Implementation\ReverseWords\ReccursiveReverseWordsStrategy.cs" />
     <Compile Include="Strategies\Implementation\ReverseWords\StringBuilderReverseWordsStrategy.cs" />
