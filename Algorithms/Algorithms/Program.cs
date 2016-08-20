@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using Algorithms.Abstrations;
 using Algorithms.Models.ProblemSolutions;
 using Algorithms.Strategies.Implementation.Fibonacci;
+using Algorithms.Strategies.Implementation.PrimeNumber;
 using Algorithms.Strategies.Implementation.ReverseWords;
 
 namespace Algorithms
@@ -30,6 +32,15 @@ namespace Algorithms
                 new ReccursiveFibonacciStrategy()
             };
 
+
+            IList<IAlgorithmResolver> primeNumberResolvers = new List<IAlgorithmResolver>()
+            {
+                new SimplePrimeNumberStrategy(),
+                new BetterPrimeNumberStrategy(),
+                new BestPrimeNumberStrategy(),
+                new ReccursivePrimeNumberStrategy(),
+            };
+
             return new List<ProblemResolvers>()
             {
                 new ProblemResolvers()
@@ -41,6 +52,11 @@ namespace Algorithms
                 {
                     Problem  = CONSTANTS.NUMBERS.FIBONACCI_PROBLEM,
                     AlgorithmResolvers = fibonacciResolvers
+                },
+                new ProblemResolvers()
+                {
+                    Problem  = CONSTANTS.NUMBERS.PRIME_NUMBER_PROBLEM,
+                    AlgorithmResolvers = primeNumberResolvers
                 }
             };
         }
@@ -60,6 +76,9 @@ namespace Algorithms
                     Console.WriteLine($"Solution : {algorithmResolver.Resolve(problemResolvers.Problem)}");
                 }
 
+                Console.WriteLine($"{Environment.NewLine}");
+                Console.WriteLine($"Extra : ");
+                Console.WriteLine($"{problemResolvers.AlgorithmResolvers.LastOrDefault( a => a.IsPreferred())?.Extra()}");
                 Console.WriteLine($"{Environment.NewLine}");
                 Console.WriteLine($"---------------------------------------------------------------------");
                 Console.WriteLine($"{Environment.NewLine}");

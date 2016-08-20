@@ -10,6 +10,10 @@ namespace Algorithms.Strategies.Implementation.Fibonacci
         {
             return CONSTANTS.DIFFICULTIES.RECCURSIVE;
         }
+        public override bool IsPreferred()
+        {
+            return true;
+        }
 
         public override object Resolve(object input)
         {

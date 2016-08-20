@@ -5,7 +5,8 @@
         public enum ALGORITHM_TYPE
         {
             REVERSE_WORDS,
-            FIBONACCI
+            FIBONACCI,
+            PRIME_NUMBER
         };
 
         public enum DIFFICULTIES
@@ -29,6 +30,7 @@
         public static class NUMBERS
         {
             public const int FIBONACCI_PROBLEM = 5;
+            public const int PRIME_NUMBER_PROBLEM = 25;
         }
     }
 }

@@ -49,8 +49,13 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Abstrations\IResolver.cs" />
     <Compile Include="Abstrations\IAlgorithmResolver.cs" />
+    <Compile Include="Strategies\Abstractions\PrimeNumberStrategy.cs" />
     <Compile Include="Strategies\Abstractions\FibonacciStrategy.cs" />
     <Compile Include="Strategies\Abstractions\ReverseWordsStrategy.cs" />
+    <Compile Include="Strategies\Implementation\PrimeNumber\ReccursivePrimeNumberStrategy.cs" />
+    <Compile Include="Strategies\Implementation\PrimeNumber\BestPrimeNumberStrategy.cs" />
+    <Compile Include="Strategies\Implementation\PrimeNumber\BetterPrimeNumberStrategy.cs" />
+    <Compile Include="Strategies\Implementation\PrimeNumber\SimplePrimeNumberStrategy.cs" />
     <Compile Include="Strategies\Implementation\Fibonacci\ReccursiveFibonacciStrategy.cs" />
     <Compile Include="Strategies\Implementation\Fibonacci\BetterFibonacciStrategy.cs" />
     <Compile Include="Strategies\Implementation\Fibonacci\SimpleFibonacciStrategy.cs" />

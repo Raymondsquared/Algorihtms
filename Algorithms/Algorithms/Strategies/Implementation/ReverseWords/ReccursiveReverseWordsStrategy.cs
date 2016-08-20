@@ -9,6 +9,10 @@ namespace Algorithms.Strategies.Implementation.ReverseWords
         {
             return CONSTANTS.DIFFICULTIES.RECCURSIVE;
         }
+        public override bool IsPreferred()
+        {
+            return true;
+        }
 
         public override object Resolve(object input)
         {

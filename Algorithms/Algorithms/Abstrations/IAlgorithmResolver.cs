@@ -2,10 +2,10 @@
 {
     public interface IAlgorithmResolver : IResolver
     {
-        CONSTANTS.ALGORITHM_TYPE GetAlgorithmType();
-
         string GetName();
-
+        CONSTANTS.ALGORITHM_TYPE GetAlgorithmType();
         CONSTANTS.DIFFICULTIES GetDifficulty();
+        bool IsPreferred();
+        string Extra();
     }
 }
